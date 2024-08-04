@@ -49,22 +49,22 @@
                 <form id="contactForm">
                     <div class="mb-3">
                         <label for="clientname" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="clientname" required>
+                        <input type="text" class="form-control" id="clientname" name="from_name" required>
                     </div>
                     <div class="mb-3">
                         <label for="clientemail" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="clientemail" required>
+                        <input type="email" class="form-control" id="clientemail" name="from_email" required>
                     </div>
                     <div class="mb-3">
                         <label for="phonenumber" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="phonenumber" required>
+                        <input type="number" class="form-control" id="phonenumber" name="phone_number" required>
                     </div>
                     <div class="mb-3">
                         <label for="clientEnquiry" class="form-label">Enquiry</label>
-                        <input type="text" class="form-control" id="clientEnquiry" required>
+                        <input type="text" class="form-control" id="clientEnquiry" name="message" required>
                     </div>
                     <div class="mb-3" id="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" name="project_request">
                         <label class="form-check-label" for="exampleCheck1">I want you to work on projects with me</label>
                     </div>
                     <button type="submit" class="btn btn-sm">Submit</button>
@@ -82,7 +82,7 @@
             <p>GitHub: <a href="https://github.com/Shuja-developer" target="_blank">github.com/shujaullah</a></p>
         </div>
     </footer>
-</body>
 <script src="script.js"></script>
 <script src="index.js"></script>
+</body>
 </html>
