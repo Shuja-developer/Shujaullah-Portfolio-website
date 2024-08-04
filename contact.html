@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shujaullah, .Net Core(MVC) Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            emailjs.init("4SKnOu-uiPFc7zhq5"); // Initialize EmailJS with your user ID
+
+            document.getElementById('contactForm').addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Send the form data using EmailJS
+                emailjs.sendForm('service_yfukbi6', 'template_c6q2a4v', this)
+                    .then(function () {
+                        alert('SUCCESS! Your message has been sent.');
+                        document.getElementById('contactForm').reset(); // Optional: Reset the form after successful submission
+                    }, function (error) {
+                        alert('FAILED... Your message could not be sent. Please try again later.');
+                        console.log('FAILED...', error);
+                    });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar sidebar-Go">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="MyIntro.html">My Intro</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>  
+        <div class="main">
+            <div class="humberger">
+                <img class="tick" src="Images/tick.png" alt="" width="25">
+                <img class="cross" src="Images/cross.png" alt="" width="25">
+            </div>
+            <div class="contactform">
+                <h1>Contact Me for work/General Enquiries</h1>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label for="clientname" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="clientname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="clientemail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="clientemail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phonenumber" class="form-label">Phone Number</label>
+                        <input type="number" class="form-control" id="phonenumber" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="clientEnquiry" class="form-label">Enquiry</label>
+                        <input type="text" class="form-control" id="clientEnquiry" required>
+                    </div>
+                    <div class="mb-3" id="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">I want you to work on projects with me</label>
+                    </div>
+                    <button type="submit" class="btn btn-sm">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <h2>Contact Information</h2>
+            <p>Email: khansajaullah793@gmail.com</p>
+            <p>Phone: +92 03435840758</p>
+            <p>Address: kpk, swat madyan, pakistan</p>
+            <p>LinkedIn: <a href="http://linkedin.com/in/shuja-ullah-b390072b8" target="_blank">linkedin.com/in/shujaullah</a></p>
+            <p>GitHub: <a href="https://github.com/Shuja-developer" target="_blank">github.com/shujaullah</a></p>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+<script src="index.js"></script>
+</html>
